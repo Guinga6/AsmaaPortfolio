@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ChevronDown, ChevronUp, Briefcase } from "lucide-react";
+import { ChevronDown, ChevronUp, Briefcase, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import resumePdf from "@assets/Asmaa Shaheen_1760470734409.pdf";
 
 const experiences = [
   {
@@ -141,8 +142,16 @@ export default function ExperienceTimeline() {
         </div>
 
         <div className="mt-12 text-center">
-          <Button size="lg" data-testid="button-download-resume">
-            Download Full Resume
+          <Button
+            asChild
+            size="lg"
+            data-testid="button-download-resume"
+            className="gap-2"
+          >
+            <a href={resumePdf} download="Asmaa-Shaheen-CV.pdf">
+              <Download className="h-5 w-5" />
+              Download Full Resume
+            </a>
           </Button>
         </div>
       </div>

@@ -4,87 +4,87 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
-import { useToast } from "@/hooks/use-toast";
 
 export default function ContactSection() {
-  const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     subject: "",
     message: "",
   });
+  const [isSent, setIsSent] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log("Form submitted:", formData);
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for reaching out. I'll get back to you soon.",
-    });
+    setIsSent(true);
     setFormData({ name: "", email: "", subject: "", message: "" });
   };
 
   return (
-    <section className="py-20 bg-background">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
-            Get In Touch
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Let's discuss how we can work together
-          </p>
-        </div>
+    <section className="relative py-24 overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-accent/10" />
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 lg:gap-14 items-center">
+          <div className="lg:col-span-2 space-y-6">
+            <span className="inline-flex items-center px-4 py-1 rounded-full border border-accent/30 bg-accent/10 text-sm font-medium text-accent">
+              Let’s Collaborate
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-bold text-foreground">
+              Ready to build something impactful?
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              Whether you have a specific project in mind or want to explore opportunities, I'm excited to hear from you.
+            </p>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          <div className="space-y-6">
-            <Card className="hover-elevate">
-              <CardContent className="p-6 flex items-center gap-4">
-                <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0">
-                  <Mail className="h-6 w-6 text-accent" />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-foreground mb-1">Email</h3>
-                  <a
-                    href="mailto:eng.asmaa.1995.2013@gmail.com"
-                    className="text-muted-foreground hover:text-accent transition-colors"
-                  >
-                    eng.asmaa.1995.2013@gmail.com
-                  </a>
-                </div>
-              </CardContent>
-            </Card>
+            <div className="space-y-4">
+              <Card className="rounded-2xl border border-white/40 dark:border-white/10 bg-white/80 dark:bg-background/80 backdrop-blur">
+                <CardContent className="p-5 flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-2xl bg-accent/10 flex items-center justify-center flex-shrink-0 shadow-inner">
+                    <Mail className="h-6 w-6 text-accent" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-foreground">Email</h3>
+                    <a
+                      href="mailto:eng.asmaa.1995.2013@gmail.com"
+                      className="text-sm text-muted-foreground hover:text-accent transition-colors"
+                    >
+                      eng.asmaa.1995.2013@gmail.com
+                    </a>
+                  </div>
+                </CardContent>
+              </Card>
 
-            <Card className="hover-elevate">
-              <CardContent className="p-6 flex items-center gap-4">
-                <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0">
-                  <Phone className="h-6 w-6 text-accent" />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-foreground mb-1">Phone</h3>
-                  <p className="text-muted-foreground">+970592169381</p>
-                </div>
-              </CardContent>
-            </Card>
+              <Card className="rounded-2xl border border-white/40 dark:border-white/10 bg-white/80 dark:bg-background/80 backdrop-blur">
+                <CardContent className="p-5 flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-2xl bg-accent/10 flex items-center justify-center flex-shrink-0 shadow-inner">
+                    <Phone className="h-6 w-6 text-accent" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-foreground">Phone</h3>
+                    <p className="text-sm text-muted-foreground">+970592169381</p>
+                  </div>
+                </CardContent>
+              </Card>
 
-            <Card className="hover-elevate">
-              <CardContent className="p-6 flex items-center gap-4">
-                <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0">
-                  <MapPin className="h-6 w-6 text-accent" />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-foreground mb-1">Location</h3>
-                  <p className="text-muted-foreground">Deir Al-Balah, Gaza, Palestine</p>
-                </div>
-              </CardContent>
-            </Card>
+              <Card className="rounded-2xl border border-white/40 dark:border-white/10 bg-white/80 dark:bg-background/80 backdrop-blur">
+                <CardContent className="p-5 flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-2xl bg-accent/10 flex items-center justify-center flex-shrink-0 shadow-inner">
+                    <MapPin className="h-6 w-6 text-accent" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-foreground">Location</h3>
+                    <p className="text-sm text-muted-foreground">Deir Al-Balah, Gaza, Palestine</p>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
           </div>
 
-          <Card>
-            <CardContent className="p-6">
-              <form onSubmit={handleSubmit} className="space-y-4">
-                <div>
+          <Card className="lg:col-span-3 rounded-3xl border border-white/50 dark:border-white/10 bg-white/90 dark:bg-background/90 backdrop-blur-xl shadow-2xl">
+            <CardContent className="p-6 sm:p-10">
+              <form onSubmit={handleSubmit} className="space-y-5">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <Input
                     placeholder="Your Name"
                     value={formData.name}
@@ -92,8 +92,6 @@ export default function ContactSection() {
                     required
                     data-testid="input-name"
                   />
-                </div>
-                <div>
                   <Input
                     type="email"
                     placeholder="Your Email"
@@ -103,29 +101,30 @@ export default function ContactSection() {
                     data-testid="input-email"
                   />
                 </div>
-                <div>
-                  <Input
-                    placeholder="Subject"
-                    value={formData.subject}
-                    onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                    required
-                    data-testid="input-subject"
-                  />
-                </div>
-                <div>
-                  <Textarea
-                    placeholder="Your Message"
-                    rows={6}
-                    value={formData.message}
-                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    required
-                    data-testid="input-message"
-                  />
-                </div>
-                <Button type="submit" className="w-full" data-testid="button-send">
+                <Input
+                  placeholder="Subject"
+                  value={formData.subject}
+                  onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
+                  required
+                  data-testid="input-subject"
+                />
+                <Textarea
+                  placeholder="Tell me about your project or idea"
+                  rows={6}
+                  value={formData.message}
+                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                  required
+                  data-testid="input-message"
+                />
+                <Button type="submit" className="w-full text-base py-6" data-testid="button-send">
                   <Send className="mr-2 h-4 w-4" />
                   Send Message
                 </Button>
+                {isSent && (
+                  <div className="rounded-xl bg-accent/10 border border-accent/20 px-4 py-3 text-sm text-accent text-center">
+                    Thank you for reaching out. I'll get back to you soon.
+                  </div>
+                )}
               </form>
             </CardContent>
           </Card>

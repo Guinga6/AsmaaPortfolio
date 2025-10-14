@@ -65,59 +65,79 @@ export default function ProjectsGrid() {
     : projects.filter((p) => p.category === activeCategory);
 
   return (
-    <section className="py-20 bg-background">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
-            Featured Projects
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Research publications and technical projects
-          </p>
+    <section className="relative py-24 overflow-hidden">
+      <div className="absolute inset-0 bg-background" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(14,165,233,0.12),transparent_45%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_10%,rgba(99,102,241,0.12),transparent_40%)]" />
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-14 space-y-6">
+          <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-primary/30 bg-primary/10 text-primary font-medium">
+            <Award className="h-4 w-4" />
+            Signature Work
+          </div>
+          <div className="space-y-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-foreground">
+              Selected Projects & Research
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              Exploring the intersection of data intelligence, cyber-physical systems, and human-centered digital experiences.
+            </p>
+          </div>
         </div>
 
         <div className="flex flex-wrap justify-center gap-3 mb-12">
           {categories.map((category) => (
-            <Button
+            <button
               key={category}
-              variant={activeCategory === category ? "default" : "outline"}
               onClick={() => setActiveCategory(category)}
               data-testid={`button-filter-${category.toLowerCase()}`}
+              className={`flex items-center gap-2 rounded-full border px-5 py-2 text-sm font-medium transition-all ${
+                activeCategory === category
+                  ? "border-primary bg-primary text-primary-foreground shadow-sm"
+                  : "border-border bg-white/70 dark:bg-background/70 text-muted-foreground hover:text-foreground"
+              }`}
             >
               {category}
-            </Button>
+            </button>
           ))}
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8">
           {filteredProjects.map((project, index) => (
             <Card
               key={index}
-              className="hover-elevate transition-all hover:-translate-y-2"
+              className="group relative overflow-hidden rounded-3xl border border-white/50 dark:border-white/10 bg-white/80 dark:bg-background/80 backdrop-blur hover:-translate-y-3 transition-all duration-500 shadow-xl"
               data-testid={`card-project-${index}`}
             >
-              <CardContent className="p-6 space-y-4">
-                {project.publication && (
-                  <Badge className="bg-chart-3 text-white">
-                    <Award className="h-3 w-3 mr-1" />
-                    {project.publication}
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <CardContent className="relative p-7 space-y-4">
+                <div className="flex items-center justify-between gap-4">
+                  <Badge variant="secondary" className="uppercase tracking-wide text-xs">
+                    {project.category}
                   </Badge>
-                )}
-                <h3 className="text-lg font-semibold text-foreground line-clamp-2">
+                  {project.publication && (
+                    <Badge className="bg-chart-3 text-white shadow-sm">
+                      <Award className="h-3 w-3 mr-1" />
+                      {project.publication}
+                    </Badge>
+                  )}
+                </div>
+                <h3 className="text-xl font-semibold text-foreground leading-tight min-h-[56px]">
                   {project.title}
                 </h3>
-                <p className="text-sm text-muted-foreground line-clamp-3">
+                <p className="text-sm text-muted-foreground leading-relaxed">
                   {project.description}
                 </p>
                 <div className="flex flex-wrap gap-2">
-                  {project.technologies.slice(0, 3).map((tech, i) => (
-                    <Badge key={i} variant="secondary" className="text-xs">
+                  {project.technologies.slice(0, 4).map((tech, i) => (
+                    <Badge key={i} variant="outline" className="text-xs bg-white/60 dark:bg-background/60">
                       {tech}
                     </Badge>
                   ))}
-                  {project.technologies.length > 3 && (
-                    <Badge variant="secondary" className="text-xs">
-                      +{project.technologies.length - 3} more
+                  {project.technologies.length > 4 && (
+                    <Badge variant="outline" className="text-xs bg-white/60 dark:bg-background/60">
+                      +{project.technologies.length - 4}
                     </Badge>
                   )}
                 </div>
@@ -126,12 +146,11 @@ export default function ProjectsGrid() {
                     href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center gap-2 rounded-full border border-primary/30 bg-primary/10 text-primary font-medium text-sm px-4 py-2 hover:bg-primary hover:text-primary-foreground transition-colors"
                     data-testid={`link-project-${index}`}
                   >
-                    <Button variant="outline" size="sm" className="w-full">
-                      View Publication
-                      <ExternalLink className="ml-2 h-4 w-4" />
-                    </Button>
+                    View Publication
+                    <ExternalLink className="h-4 w-4" />
                   </a>
                 )}
               </CardContent>

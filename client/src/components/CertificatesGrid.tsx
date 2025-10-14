@@ -79,43 +79,50 @@ const certificates = [
 
 export default function CertificatesGrid() {
   return (
-    <section className="py-20 bg-background">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
+    <section className="relative py-24">
+      <div className="absolute inset-0 bg-background" />
+      <div className="absolute inset-0 bg-gradient-to-b from-primary/10 via-transparent to-accent/10" />
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-14 space-y-4">
+          <span className="inline-flex items-center gap-2 px-4 py-1 rounded-full border border-primary/30 bg-primary/10 text-sm font-medium text-primary">
             Certifications & Training
+          </span>
+          <h2 className="text-3xl sm:text-4xl font-bold text-foreground">
+            Continuous Learning, Humanitarian Impact
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Continuous professional development and specialized training
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+            Blending humanitarian responsibility with technical mastery through an ongoing commitment to professional development.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-7">
           {certificates.map((cert, index) => {
             const Icon = cert.icon;
             return (
               <Card
                 key={index}
-                className="hover-elevate transition-all hover:-translate-y-1"
+                className="group relative overflow-hidden rounded-2xl border border-white/50 dark:border-white/10 bg-white/80 dark:bg-background/80 backdrop-blur hover:-translate-y-2 transition-all duration-500 shadow-lg"
                 data-testid={`card-certificate-${index}`}
               >
-                <CardContent className="p-6 space-y-3">
-                  <div className="flex items-start justify-between gap-2">
-                    <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0">
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br from-accent/10 via-transparent to-primary/10" />
+                <CardContent className="relative p-6 space-y-4">
+                  <div className="flex items-start justify-between gap-3">
+                    <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center flex-shrink-0 shadow-inner">
                       <Icon className="h-6 w-6 text-accent" />
                     </div>
                     <Badge
                       variant="secondary"
-                      className={
+                      className={`text-xs font-semibold uppercase tracking-widest ${
                         cert.category === "Humanitarian"
                           ? "bg-chart-3 text-white"
-                          : "bg-accent text-accent-foreground"
-                      }
+                          : "bg-primary/20 text-primary"
+                      }`}
                     >
                       {cert.category}
                     </Badge>
                   </div>
-                  <h3 className="text-sm font-semibold text-foreground line-clamp-2 leading-tight">
+                  <h3 className="text-sm font-semibold text-foreground leading-tight line-clamp-3">
                     {cert.title}
                   </h3>
                   <p className="text-xs text-muted-foreground">{cert.issuer}</p>
