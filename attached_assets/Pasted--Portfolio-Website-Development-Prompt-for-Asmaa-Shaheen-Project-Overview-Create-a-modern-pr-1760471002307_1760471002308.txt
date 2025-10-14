@@ -1,0 +1,299 @@
+# Portfolio Website Development Prompt for Asmaa Shaheen
+
+## Project Overview
+Create a modern, professional, and fully responsive portfolio website for Asmaa Younis Khalil Younis, a Computer Systems Engineer. The website should be built using HTML, CSS, and JavaScript with multiple pages showcasing her professional experience, skills, education, projects, and certifications.
+
+## Technical Requirements
+- **Technologies**: Pure HTML5, CSS3, and vanilla JavaScript
+- **Design**: Modern, clean, professional UI with smooth animations
+- **Responsiveness**: Fully responsive design (mobile, tablet, desktop)
+- **Navigation**: Smooth scrolling and intuitive navigation menu
+- **Color Scheme**: Professional palette (suggest: blues, whites, grays with accent colors)
+- **Typography**: Clean, readable fonts (Google Fonts recommended)
+
+## Page Structure & Content
+
+### 1. Home Page (index.html)
+**Hero Section:**
+- Full-screen hero with professional greeting
+- Name: "Asmaa Younis Khalil Younis"
+- Title: "Computer Systems Engineer"
+- Tagline highlighting expertise: "Data Analyst | Full-Stack Developer | Technical Coordinator"
+- Professional photo placeholder
+- Call-to-action buttons: "View My Work" and "Download CV"
+- Animated background or subtle particle effects
+
+**Brief Introduction Section:**
+- Short bio (2-3 sentences) from profile
+- Key highlights: 6+ years experience, diverse technical skills
+- Quick stats counter: Years of Experience, Projects Completed, Technologies Mastered
+
+**Services/Expertise Overview:**
+- Data Analysis & Entry
+- Full-Stack Web Development
+- Project Coordination & Management
+- Technical Training & Teaching
+
+**Social Media Links** (Header and Footer):
+- Email: eng.asmaa.1995.2013@gmail.com
+- LinkedIn: linkedin.com/in/asmaa-shaheen
+- Phone: +970592169381
+- GitHub (if applicable)
+- Location: Gaza, Palestine
+
+### 2. Education Page
+**Timeline Layout:**
+
+**Master's Degree**
+- University: Yildiz Technical University
+- Year: 2025 (Online)
+- Field: Computer Systems Engineering
+
+**Diploma**
+- Institution: Al-Aqsa University
+- Year: 2024
+- Field: Computer and Technology Teacher
+
+**Bachelor's Degree**
+- Institution: Palestine Technical College
+- Year: 2018
+- Field: Computer Systems Engineering
+- GPA: 92.28 (Excellent)
+- Location: Deir Al Balah, Gaza, Palestine
+
+**Secondary Certificate**
+- School: Shohada Deir Al-Balah
+- Year: 2013
+- GPA: 94.8 (Excellent)
+
+**Design Elements:**
+- Vertical timeline with icons
+- Animated elements on scroll
+- Cards for each educational achievement
+- Institution logos/icons
+
+### 3. Projects Page
+**Featured Projects (Based on Publications & Experience):**
+
+**Project 1: Assets and Keys Management System Using NFC Technology**
+- Description: Automated system for asset management and tracking
+- Technologies: NFC Technology, IoT
+- Publication: IEEE 2018
+- Link: https://ieeexplore.ieee.org/document/8531221
+- Image placeholder
+
+**Project 2: NFC-Based System for Sharing Economy**
+- Description: Automated tracking system for shared assets
+- Technologies: NFC, Database Management
+- Publication: IEEE 2019
+- Link: https://ieeexplore.ieee.org/document/8925320
+
+**Project 3: Master Program in Cyber Physical Systems**
+- Description: Research and development of CPS master program
+- Role: Researcher & Technical Coordinator
+- Publication: IEEE 2019
+- Link: https://ieeexplore.ieee.org/document/8925328
+
+**Additional Project Categories:**
+- Web Development Projects (WordPress, Laravel, Full-stack)
+- Arduino Projects (20+ practical applications)
+- Data Analysis Projects
+- Each with description, tech stack, and GitHub link placeholder
+
+**Design Elements:**
+- Grid layout with hover effects
+- Filter buttons by category
+- Modal windows for detailed project views
+- Live demo and GitHub links
+
+### 4. Skills Page
+**Organized by Categories:**
+
+**Technical Skills:**
+- Programming Languages: C/C++/C#, VB, MATLAB, JAVA, Assembly, PHP, JavaScript, jQuery, HTML, CSS, Android
+- Frameworks & CMS: WordPress, Blogger, Laravel
+- Databases: Oracle, MySQL, Backup Solutions
+- Software: Adobe Suite (Photoshop, Premiere, Audition), Android Studio, MATLAB, Visual Studio, Brackets, NetBeans
+- Operating Systems: Windows Administration
+- Office Suite: Word, PowerPoint, Excel, EndNote
+
+**Professional Skills:**
+- Data Analysis & Statistical Review
+- Full-Stack Web Development
+- Project Management & Coordination
+- Technical Training & Teaching
+- Report Writing & Documentation
+- Strategic Planning & Event Organization
+- Team Leadership
+- Finance & Budget Management
+
+**Soft Skills:**
+- Strong Communication
+- Problem-Solving
+- Time Management
+- Quick Learner
+- Works Under Pressure
+- Independent & Team Player
+- Leadership Abilities
+
+**Design Elements:**
+- Skill bars with percentage animations
+- Icons for each technology
+- Categorized sections with tabs or accordions
+- Hover effects showing proficiency level
+
+### 5. Certificates Page
+**Humanitarian & Protection Training:**
+- PSEA – Protection from Sexual Exploitation and Abuse (IASC/UN)
+- Child Safeguarding & Child Protection (UNICEF/Save the Children)
+- Gender-Based Violence Core Concepts (GBVIMS/UNFPA)
+- Safeguarding & Code of Conduct (CHS Alliance)
+- Humanitarian Principles & International Law (ICRC)
+- Psychological First Aid (WHO/IFRC)
+- Personal Safety in Conflict Zones (DisasterReady.org)
+- Community Engagement & Accountability (Sphere/HLA)
+- Case Management in Protection Response
+- Basic First Aid & Emergency Preparedness (IFRC)
+
+**Technical Training:**
+- Full-stack Web Development (Udemy, Lynda) - 200hr
+- Freelance TOT for Academic (Gaza Sky Geeks/Mercy Corps) - 2020
+- Data Collection & KoboToolbox Basics (Harvard Humanitarian Initiative)
+- Monitoring & Evaluation Fundamentals (Philanthropy University)
+
+**Design Elements:**
+- Masonry grid layout with certificate cards
+- Certificate images/badges
+- Issuing organization logos
+- Date and credential IDs
+- Download/verify links
+
+### 6. Resume/Experience Page
+**Professional Experience Timeline (Reverse Chronological):**
+
+1. **Data Entry & Data Analyst** - Culture & free Thought Association (07/2024 – 04/2025)
+2. **Data Entry Clerk** - MDM France (12/2023 – 06/2024)
+3. **Data Entry & Data Analyst** - Ayzeen Company (09/2022 – 10/2023)
+4. **Freelancer** - Various Projects (03/2018 – 10/2023)
+5. **Researcher, Administrative and Technical Assistant** - Palestine Technical College (07/2019 – 09/2022)
+6. **Professional Assistant of GIS** - Maghazi Municipality (09/2021 – 12/2021)
+7. **Lecturer (Part-time)** - Al-Aqsa Community College (02/2020 – 01/2021)
+8. **Computer Engineer** - Ministry of Labour (06/2019 – 12/2019)
+9. **Arduino Trainer** - Gaza Incubator for Renewable Energy (06/2019 – 08/2019)
+10. **Lecturer** - Palestine Technical College (10/2018 – 05/2019)
+11. **Computer Programmer and System Administrator** - Culture & free Thought Association (05/2018 – 09/2018)
+
+Each position should include:
+- Job title and company
+- Date range and location
+- Key responsibilities (bullet points)
+- Technologies used
+
+**Download CV Button:**
+- PDF download link
+- Print-friendly version
+
+**Design Elements:**
+- Interactive timeline
+- Expandable cards for each position
+- Company logos
+- Duration calculator
+- Animated transitions
+
+## Global Elements
+
+### Navigation Menu (All Pages)
+- Fixed/sticky header
+- Logo: "AS" or "Asmaa Shaheen"
+- Menu items: Home | Education | Projects | Skills | Certificates | Resume
+- Mobile hamburger menu
+- Active page indicator
+- Smooth scroll transitions
+
+### Footer (All Pages)
+**Content:**
+- Quick Links: All page navigation
+- Contact Information:
+  - Email: eng.asmaa.1995.2013@gmail.com
+  - Phone: +970592169381
+  - Location: Deir Al-Balah, Gaza, Palestine
+- Social Media Icons:
+  - LinkedIn (primary)
+  - Email
+  - GitHub
+  - Other professional networks
+- Copyright: © 2025 Asmaa Shaheen. All rights reserved.
+- "Built with passion in Palestine" message
+
+**Design:**
+- Dark background with light text
+- Multi-column layout (desktop)
+- Stacked layout (mobile)
+- Social icons with hover effects
+- Back-to-top button
+
+## Special Features
+
+### Interactive Elements:
+1. **Smooth Scrolling** between sections
+2. **Scroll Animations** (fade-in, slide-in effects)
+3. **Typing Animation** for hero section
+4. **Particle Background** on home page
+5. **Hover Effects** on all interactive elements
+6. **Loading Animation** on page load
+7. **Scroll Progress Indicator**
+8. **Theme Toggle** (Optional: Light/Dark mode)
+
+### Contact Form (Optional - Can be on Home or dedicated page):
+- Name field
+- Email field
+- Subject field
+- Message textarea
+- Send button
+- Form validation
+
+### Performance Optimization:
+- Lazy loading for images
+- Minified CSS and JS
+- Optimized assets
+- Fast loading times
+- SEO-friendly structure
+
+## Design Inspiration:
+- Modern, minimalist aesthetic
+- Professional color palette
+- Ample white space
+- Clean typography hierarchy
+- Consistent spacing and alignment
+- Subtle animations and transitions
+- Mobile-first approach
+
+## Additional Notes:
+- Include meta tags for SEO
+- Add Open Graph tags for social sharing
+- Include favicon
+- Make all links functional
+- Add alt text for images
+- Ensure accessibility (ARIA labels, keyboard navigation)
+- Cross-browser compatibility
+- Add Google Analytics tracking code placeholder
+
+## Languages:
+- Arabic and English support (as she speaks both)
+- RTL support consideration for Arabic
+
+---
+
+**Deliverables:**
+- index.html (Home)
+- education.html
+- projects.html
+- skills.html
+- certificates.html
+- resume.html
+- styles.css (or multiple CSS files)
+- script.js (or multiple JS files)
+- assets folder (images, icons, CV PDF)
+- README.md with setup instructions
+
+Build a professional, impressive portfolio that showcases Asmaa's extensive experience, technical expertise, and diverse skill set in data analysis, full-stack development, project coordination, and technical training.
